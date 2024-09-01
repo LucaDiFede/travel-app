@@ -1,0 +1,533 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #95c0ff, yellow);
+}
+
+.rating {
+    background-color: #222;
+    margin-left: 25%;
+    padding: 0.5em 2em 2em 2em;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    border-radius: 1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, .2);
+}
+
+.GreatStar {
+    color: lightskyblue;
+    font-size: 5em;
+    position: relative;
+    padding: 0 0 2em 0;
+
+}
+
+.GreatStar > i {
+    transition: 0.3s;
+}
+
+.big-star i, .selected-rating {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.selected-rating {
+    color: #fff;
+    margin: 0;
+    font-size: 0.5em;
+}
+
+.Stelle {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Stella {
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 24px;
+    color: #ccc;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.selected, .Stella:hover {
+    color: yellow;
+    transform: scale(1.1);
+}
+
+.feedback-messaggio {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s;
+}
+
+.feedback-messagge p {
+    color: #ccc;
+}
+
+.rating button {
+    display: block;
+    background: #ffc107;
+    border-radius: 0.8em;
+    width: 10%;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
+    margin-top: 10px;
+}
+
+.rating button:hover {
+    background: #dfa906;
+}
+
+a:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.everything {
+    width: 100%;
+    
+    
+}
+
+header {
+    height: 50px;
+}
+
+.Logo {
+    width: 85%;
+    height: 50px;
+    display: flex;
+}
+
+.Logo > div {
+    padding-left: 50px;
+}
+
+.Logo > a > img:hover {
+    cursor: pointer;
+}
+
+.icons {
+    width: 15%;
+    height: 35px;
+    padding-top: 15px;
+    padding-left: 50px;
+    margin-right: 20px;
+}
+
+.fa-user {
+    margin-left: 10px;
+}
+
+.Logo > a > img {
+    width: 150px;
+    height: 50px;
+}
+
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    margin-left: 200px;
+}
+
+input {
+    font-size: 1rem;
+}
+
+.user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+
+.cards {
+    display: flex;
+    padding: .5rem;
+    width: 500px;
+    margin-top: 60px;
+    margin-left: 100px;
+    height: 190px;
+}
+
+.card {
+    border: 1px solid white;
+    background-image: url(https://thumbs.dreamstime.com/b/serious-young-man-21070879.jpg);
+    background-size: contain;
+    width: 150px;
+    height: 190px;
+}
+
+.info-cards {
+    background-color: blue;
+    width: 320px;
+    padding: 15px;
+}
+
+.card > header {
+    margin-bottom: .25rem;
+}
+
+.card > .body {
+    font-size: .8rem;
+    color: grey;
+}
+
+.hide {
+    display: none;
+}
+
+.flex {
+    display: inline-block;
+}
+
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin-left: 150px;
+}
+
+.barra {
+    margin-top: 100px;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.slide > img {
+    display: block;
+    width: 900px;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide > img {
+    display: block;
+    width: 900px;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide > img:hover {
+    width: 700px;
+    height: 450px;
+    padding-left: 100px;
+    padding-top: 90px;
+    transition: 2s;
+}
+
+.slide[data-active] {
+    opacity: 1;
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+}
+
+.carousel-button.prev {
+    left: 160px;
+}
+
+.carousel-button.next {
+    right: 490px;
+}
+
+.Ultimo {
+    display: flex;
+    margin-top: 30px;
+}
+
+.Ultimo-Scritta {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.Grey {
+    background-color: rgb(189, 192, 192);
+}
+
+.Accesso {
+    background-color: white;
+    border-radius: 25px;
+}
+
+.media {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.video {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.video > iframe {
+    margin-top: 30px;
+}
+
+.video > h1 {
+    margin-left: 35%;
+    font-size: 50px;
+}
+
+.media {
+    margin-left: 90px;
+    margin-top: 50px;
+}
+
+.media > iframe {
+    margin-top: 30px;
+}
+
+.media > h1 {
+    margin-left: 35%;
+    font-size: 50px;
+}
+
+.media > img {
+    width: 200px;
+    height: 200px;
+}
+
+
+.media > .tall1 {
+    height: 100px;
+    padding-bottom: 60px;
+}
+
+.media > .tall2 {
+    height: 100px;
+    padding-bottom: 30px;
+}
+
+.media > .tall3 {
+    height: 120px;
+    padding-bottom: 50px;
+}
+
+footer {
+    height: 350px;
+    background-color: grey;
+    padding-top: 70px;
+    padding-left: 50px;
+}
+
+footer > .container > .space-footer > h2 {
+    padding-bottom: 30px;
+}
+
+.container {
+    display: flex;
+}
+
+.space-footer > a {
+    margin-top: 20px;
+    margin-left: 145px;
+}
+
+.space-footer > h2 {
+    margin-top: 20px;
+    margin-left: 145px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.Registrazione {
+    margin-right: 200px;
+    margin-left: 200px;
+    height: 100%;
+    padding-top: 100px;
+    padding-left: 300px;
+    height: 700px;
+    background-color: rgba(0,0,0,.5);
+}
+
+.asus-background {
+    background-image: url(https://th.bing.com/th/id/R.340881351e89dfe9497ed0f5ff88a746?rik=nW7RTM%2ffGx%2bxBg&riu=http%3a%2f%2fhdqwalls.com%2fwallpapers%2fasus-hd.jpg&ehk=NIQZYsT7yTyW26ZycgcEv%2bj1GPbYmoMfUYOBz5U8YhA%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+}
+
+.Registrazione > h1 > .Registrazioneh1 {
+    padding-left: 185px;
+    padding-top: 10px;
+}
+
+.Registrazione > h1 > .loginh1 {
+    padding-left: 220px;
+    padding-top: 10px;
+}
+
+.Registrazione > h1 > .fa-user {
+    font-size: 100px;
+    padding-left: 200px;
+}
+
+.separazione {
+    padding-bottom: 10px;
+}
+
+input {
+    height: 30px;
+    width: 500px;
+}
+
+.invia {
+    margin-top: 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.img-calcolo {
+    padding: 50px;
+    display: flex;
+    margin-right: 50px;
+}
+
+.Risultato {
+    margin-top: 30px;
+}
+
+aside {
+    border: 1px solid black;
+    background-color: white;
+    z-index: 9;
+    height: 75px;
+    width: 1190px;
+    margin-left: 150px;
+}
+
+aside li {
+    margin-top: 20%;
+}
+
+aside button {
+    margin-top: 9%;
+}
+
+.dropdown1 ul {
+    list-style: none;
+}
+
+.dropdown1 ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown1 ul li a {
+    display: block;
+    position: 20px 25px;
+    text-decoration: none;
+    padding-top: 15px;
+}
+
+.dropdown1 ul li ul.dropdown2 li {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.dropdown1 ul.dropdown1 li.dropdown1 ul.dropdown2 li.dropdown2:hover {
+    cursor: pointer;
+}
+
+.dropdown1 ul li ul.dropdown2 {
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    display: none;
+    padding-right: 30px;
+    border: 1px solid black;
+}
+
+
+.dropdown1 ul li:hover ul.dropdown2 {
+    display: block;
+}
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.destinazione {
+    position: relative;
+    overflow: hidden;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.destinazione > img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.destinazione > .content {
+    position: absolute;
+    inset: 0;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.destinazione > .content.fade {
+    opacity: 0;
+}
+
+.destinazione:hover > .content.fade {
+    opacity: 1;
+    transition: 1s;
+}
+
+margin-left: 30px; -->
+    margin-top: 50px;

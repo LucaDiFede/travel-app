@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+}
+
+/* Flip-Book Inizio */
+
+.Flip-Book {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.book {
+    position: relative;
+    width: 450px;
+    height: 600px;
+    transition: 0.5s;
+
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front,
+.back {
+    background: linear-gradient(orange, purple);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+    border: 5px solid white;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.back {
+    z-index: 0;
+}
+
+.back-content {
+    transform: rotateY(180deg);
+}
+
+.front-content-1 {
+    width: 92%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Flip-Book button {
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.Flip-Book button:focus {
+    outline: none;
+}
+
+.Flip-Book button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+#p1 {
+    z-index: 4;
+}
+
+#p2 {
+    z-index: 3;
+}
+
+#p3 {
+    z-index: 2;
+}
+
+#p4 {
+    z-index: 1;
+}
+
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Flip-Book Fine */
+
+.container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #95c0ff, yellow);
+    padding-top: 4%;
+    padding-left: 10%;
+}
+
+.container h1 {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.container h1 img {
+    width: 60px;
+}
+
+.container button img {
+    width: 25px;
+    margin-right: 8px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#9418fd, #571094);
+    color: #fff;
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    min-height: 150px;
+    max-width: 500px;
+    background: white;
+    color: #333;
+    padding: 20px;
+    margin: 20px 0;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input-box img {
+    width: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.writingSpace {
+    background-color: white;
+    width: 350px;
+    max-height: 500px;
+}
+
+label {
+    background: red;
+    width: 100px;
+    display: block;
+    color: #fff;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input {
+    display: none;
+}
+
+.white {
+    color: white;
+}
+
+.display-flex {
+    display: flex;
+}
